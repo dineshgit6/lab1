@@ -1,0 +1,222 @@
+Create Local file <Lab1.txt>
+Create account in Github
+Create Project Repository <Repo1> in Github
+Upload local file <Lab1.txt> to the repository
+Clone Git <Git clone> hub repository with Local system
+Modified Local file <vi Lab1.txt> with new text message
+Check the status of file <Gi status>
+Commit the changes of file < Gi commit -m "any message">
+Push the changes made in file to Global repository <Gi push>
+
+
+dipatil@LIN19000544 MINGW64 ~
+$ pwd
+/c/Users/dipatil
+
+$ cd Project_work
+
+dipatil@LIN19000544 MINGW64 /c/Project_work
+$ cd DevOps
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps
+$ pwd
+/c/Project_work/DevOps
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps
+$ mkdir Repo1
+
+$ cd Repo1
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1
+$ pwd
+/c/Project_work/DevOps/Repo1
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1
+$ git clone https://github.com/dineshgit6/dinesh_personal.git
+Cloning into 'dinesh_personal'...
+remote: Enumerating objects: 6, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 6 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (6/6), done.
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1
+$ ls -la
+total 0
+drwxr-xr-x 1 dipatil 1049089 0 Apr  8 12:52 ./
+drwxr-xr-x 1 dipatil 1049089 0 Apr  8 12:48 ../
+drwxr-xr-x 1 dipatil 1049089 0 Apr  8 12:52 dinesh_personal/
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$ cd .git
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal/.git (GIT_DIR!)
+$ pwd
+/c/Project_work/DevOps/Repo1/dinesh_personal/.git
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal/.git (GIT_DIR!)
+$ ls -la
+total 17
+drwxr-xr-x 1 dipatil 1049089   0 Apr  8 12:52 ./
+drwxr-xr-x 1 dipatil 1049089   0 Apr  8 12:52 ../
+-rw-r--r-- 1 dipatil 1049089 312 Apr  8 12:52 config
+-rw-r--r-- 1 dipatil 1049089  73 Apr  8 12:52 description
+-rw-r--r-- 1 dipatil 1049089  23 Apr  8 12:52 HEAD
+drwxr-xr-x 1 dipatil 1049089   0 Apr  8 12:52 hooks/
+-rw-r--r-- 1 dipatil 1049089 209 Apr  8 12:52 index
+drwxr-xr-x 1 dipatil 1049089   0 Apr  8 12:52 info/
+drwxr-xr-x 1 dipatil 1049089   0 Apr  8 12:52 logs/
+drwxr-xr-x 1 dipatil 1049089   0 Apr  8 12:52 objects/
+-rw-r--r-- 1 dipatil 1049089 114 Apr  8 12:52 packed-refs
+drwxr-xr-x 1 dipatil 1049089   0 Apr  8 12:52 refs/
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal/.git (GIT_DIR!)
+$ cat config
+[core]
+        repositoryformatversion = 0
+        filemode = false
+        bare = false
+        logallrefupdates = true
+        symlinks = false
+        ignorecase = true
+[remote "origin"]
+        url = https://github.com/dineshgit6/dinesh_personal.git
+        fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master
+
+
+$ vi lab2.txt
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$ ls -la
+total 11
+drwxr-xr-x 1 dipatil 1049089  0 Apr  8 13:27 ./
+drwxr-xr-x 1 dipatil 1049089  0 Apr  8 12:52 ../
+drwxr-xr-x 1 dipatil 1049089  0 Apr  8 13:26 .git/
+-rw-r--r-- 1 dipatil 1049089 26 Apr  8 13:25 Lab1.txt
+-rw-r--r-- 1 dipatil 1049089 17 Apr  8 13:27 lab2.txt
+-rw-r--r-- 1 dipatil 1049089 25 Apr  8 12:52 README.md
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$ git add lab2.txt
+warning: LF will be replaced by CRLF in lab2.txt.
+The file will have its original line endings in your working directory
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        new file:   lab2.txt
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+        modified:   Lab1.txt
+
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$ git commit -m "change 2"
+[master 9c7e229] change 2
+ Committer: PATIL <dinesh.a.patil@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 lab2.txt
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$ git push
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 328 bytes | 109.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/dineshgit6/dinesh_personal.git
+   dc6c341..9c7e229  master -> master
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$ ls -lrt
+total 3
+-rw-r--r-- 1 dipatil 1049089 25 Apr  8 12:52 README.md
+-rw-r--r-- 1 dipatil 1049089 26 Apr  8 13:25 Lab1.txt
+-rw-r--r-- 1 dipatil 1049089 17 Apr  8 13:27 lab2.txt
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$
+
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$ vi Lab1.txt
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$ git add Lab1.txt
+warning: LF will be replaced by CRLF in Lab1.txt.
+The file will have its original line endings in your working directory
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+        modified:   Lab1.txt
+
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$ git commit -m "change 1"
+[master 9886573] change 1
+ Committer: PATIL <dinesh.a.patil@capgemini.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$ git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 334 bytes | 111.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To https://github.com/dineshgit6/dinesh_personal.git
+   9c7e229..9886573  master -> master
+
+dipatil@LIN19000544 MINGW64 /c/Project_work/DevOps/Repo1/dinesh_personal (master)
+$
